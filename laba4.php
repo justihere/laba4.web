@@ -1,32 +1,14 @@
 <?php
 	
 
-	/*-- VARIABLES --*/
+	/*-- VARIABLES --*
 	    $name = 'Ira'; // string
 	    $age = 19; // int
 	    $has_kids = false; // bool
 	    $cash = 20.75; // float
 	
 
-	/*-- WORKING WITH VARIABLES, STRING, CONCATENATION, ETC --*/
-	//    echo $name;
-	//    echo '$name is $age years old.'; // error (not parsing a variable)
-	//    echo $name . ' is ' . $age . ' years old.'; // . - concatenation operator
-	//    echo "$name is $age years old.";
-	//    echo "${name} is ${age} years old.";
-	//
-	//    $x = '5' + '5'; // gives us an int 10
-	//    var_dump($x);
-	//    echo 10 - 5;
-	//    echo 5 * 6;
-	//    echo 10 / 2;
-	//    echo 10 % 3;
-	//
-	//    define('HOST', 'localhost'); // constants
-	//    const HOST2 = 'a';
-	
 
-	/*-- EXPLODE, IMPLODE --*/
 	    $sports_string = "football,volleyball,tennis";
 	    $sports_array = explode(",", $sports_string);
 	    print_r($sports_array);
@@ -36,15 +18,11 @@
 	    $items_string = implode(",", $items_array);
 	    echo $items_string;
 	
-
-	/*-- розіменування змінних --*/
 	    $num = 5;
 	    $ref =& $num; // reference
 	    $ref = 10;
 	    echo $num;
-	
 
-	/*-- порівняння --*/
 	    $a = 5;
 	    $b = '5';
 	    $c = 7;
@@ -65,19 +43,19 @@
 	    }
 	
 
-	/*-- приведення до цілого числа --*/
+	
 	    $x = "123.45";
 	    $y = (int)$x;
 	    var_dump($y);
 	
 
-	/*-- приведення до рядка --*/
+	
 	    $x = 123;
 	    $y = (string)$x;
 	    var_dump($y);
 	
 
-	/*-- приведення до логічного значення --*/
+	
 	    $x = "some value";
 	    $y = (bool)$x;
 	    var_dump($y);
@@ -88,7 +66,7 @@
 	    var_dump($w);
 	
 
-	/*-- oop --*/
+	
 	    class Fruit{
 	        public $name;
 	        public $color;
@@ -126,7 +104,7 @@
 	    echo $pear->get_color();
 	
 
-	/*-- singleton pattern --*/
+	
 	    class Singleton{
 	        private static $instance = null;
 	        private function __construct(){
@@ -145,7 +123,7 @@
 	    $obj2 = Singleton::getInstance();
 	
 
-	/*-- magic methods --*/
+	
 	    class Person {
 	        private $name;
 	        private $age;
@@ -192,7 +170,6 @@
 	    echo $person1->say_hello("world");
 	
 
-	/*-- arrays --*/
 	        $numbers = [1, 44, 55, 22];
 	        $fruits = array('apple', 'orange', 'pear');
 	
@@ -200,8 +177,6 @@
 	        //var_dump($numbers);
 	        echo $fruits[1];
 	
-
-	/*-- associative array --*/
 	        $colors = [
 	            1 => 'red',
 	            4 => 'blue',
@@ -219,9 +194,9 @@
 	
 
 	        $person = [
-	            'first_name' => 'olya',
-	            'last_name' => 'neshcheret',
-	            'email' => 'all@gmail.com'
+	            'first_name' => 'ira',
+	            'last_name' => 'orhish',
+	            'email' => '123@gmail.com'
 	        ];
 	        echo $person['first_name'];
 	
@@ -230,26 +205,24 @@
 	            [
 	                'first_name' => 'ira',
 	                'last_name' => 'orhish',
-	                'email' => ' all@gmail.com'
+	                'email' => ' 123@gmail.com'
 	            ],
 	            [
 	                'first_name' => 'jakob',
 	                'last_name' => 'pushkarenko',
-	                'email' => 'all@gmail.com'
+	                'email' => '123@gmail.com'
 	            ],
 	            [
 	                'first_name' => 'anya',
 	                'last_name' => 'yakubova',
-	                'email' => ' all@gmail.com'
+	                'email' => ' 123@gmail.com'
 	            ]
 	        ];
 	        echo $people[1]['email'];
 	
 
-	        var_dump(json_encode($people)); // same with json_decode
+	        var_dump(json_encode($people)); 
 	
-
-	/*-- conditionals --*/
 	        $age = 20;
 	        if($age >= 18){
 	            echo 'You are old enough to vote';
@@ -289,9 +262,7 @@
 	        $firstPost = $posts[0] ?? null;
 	        echo $firstPost;
 	
-
 	        $favColor = 'red';
-	
 
 	        switch ($favColor){
 	            case 'red':
@@ -307,8 +278,6 @@
 	                echo 'Your favorite color is unknown';
 	        }
 	
-
-	/*-- loops --*/
 	        for($i = 0; $i <= 10; $i++){
 	            echo $i;
 	        }
@@ -338,12 +307,11 @@
 	        foreach($posts as $index => $post){
 	            echo $index . ' - ' . $post . '<br>';
 	        }
-	
 
 	        $person = [
 	            'first_name' => 'ira',
 	            'last_name' => 'orhish',
-	            'email' => ' all@gmail.com'
+	            'email' => ' 123@gmail.com'
 	        ];
 	        foreach($person as $key => $value){
 	            echo "$key - $value<br>";
@@ -351,7 +319,7 @@
 	
 
 	/*-- functions --*/
-	        function registerUser($name){ //argument
+	        function registerUser($name){ 
 	            echo $name . ' registered';
 	        }
 	        registerUser('Olya'); //parameter
@@ -366,17 +334,15 @@
 	        echo $number;
 	
 
-	        $subtract = function ($n1, $n2){ // anonymous function
+	        $subtract = function ($n1, $n2){ 
 	            return $n1 - $n2;
 	        }; // ! need a semicolon here
 	        echo $subtract(10, 5);
 	
 
-	        $multiply = fn($n1, $n2) => $n1 * $n2; // arrow function
+	        $multiply = fn($n1, $n2) => $n1 * $n2; 
 	        echo $multiply(9, 9);
 	
-
-	/*-- array functions --*/
 	        $fruits = ['apple', 'orange', 'pear'];
 	
 
@@ -449,8 +415,6 @@
 	        $sum = array_reduce($numbers, fn($carry, $num) => $carry + $num);
 	        var_dump($sum);
 	
-
-	/*-- string functions --*/
 	        $string = 'Hello World';
 	        echo strlen($string);
 	        echo strpos($string, 'o');
@@ -488,11 +452,8 @@
 
 	/*-- get and post --*/
 	    if(isset($_POST['submit'])){
-	        // echo $_POST['name'];
-	        //$name = htmlspecialchars($_POST['name']);
-	        //$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+	       
 	        $name = filter_var($_POST['name'], FILTER_SANITIZE_SPECIAL_CHARS);
-	        // echo $_POST['age'];
 	        $age = htmlspecialchars($_POST['age']);
 	        echo $name;
 	    }
